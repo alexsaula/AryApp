@@ -1,0 +1,9 @@
+<resources>
+    <!-- Comentário -->
+    <string name="app_name">AryApp</string>
+   <string name="mensagem_inicial"></string>
+    <string name="texto_senha">Digite sua senha</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_config">Configurações</string>
+</resources>
