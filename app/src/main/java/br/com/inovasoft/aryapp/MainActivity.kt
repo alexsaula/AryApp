@@ -1,10 +1,8 @@
 package br.com.inovasoft.aryapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import br.com.inovasoft.aryapp.TelaInicialActivity
 import kotlinx.android.synthetic.main.login.*
 
 
@@ -18,27 +16,32 @@ class MainActivity : DebugActivity() {
         logo.setImageResource(R.drawable.logo)
 
         botao_login.setOnClickListener {
-            Toast.makeText(this, "Clicou no botão de login", Toast.LENGTH_SHORT).show()
-            // qualquer outra coisa que o evento de clique deve executar
 
-            val nome_usuario = campo_usuario.text.toString()
 
-            val intent = Intent(this, TelaInicialActivity::class.java)
-            val params = Bundle()
-            params.putString("nome", nome_usuario)
-            params.putInt("numero", 10)
-            var array: ArrayList<Int> = ArrayList<Int>()
-            array.add(10)
-            array.add(20)
-            params.putIntegerArrayList("array_numeros", array)
+            val nomeUsuario = campo_usuario.text.toString()
+            val senhaUsuario = campo_senha.text.toString()
 
-            intent.putExtras(params)
-            intent.putExtra("outro_paramentro", true)
+
+            if(nomeUsuario.equals("aluno") && senhaUsuario.equals("impacta")) {
+
+                val intent = Intent(this, TelaInicialActivity::class.java)
+                val params = Bundle()
+                params.putString("nomeUsuario", nomeUsuario)
+                intent.putExtras(params)
+
+                startActivity(intent)
+
+            }else {
+                Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        botaoCadastro.setOnClickListener{
+            val intent = Intent(this, CadastroActivity::class.java)
 
             startActivity(intent)
         }
-
-
 
 
     }

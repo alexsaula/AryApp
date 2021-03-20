@@ -4,14 +4,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/mensagem_inicial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mensagem_inicial"
-
-        />
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="300sp"
@@ -19,9 +11,8 @@
         android:layout_gravity="center_horizontal|center_vertical"
         />
 
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Usuário"
@@ -30,7 +21,6 @@
 
 
         />
-
 
     <EditText
         android:id="@+id/campo_usuario"
@@ -44,7 +34,7 @@
          />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Senha"
@@ -70,8 +60,13 @@
         android:layout_marginTop="20sp"
         />
 
-
-
-
+    <Button
+        android:id="@+id/botaoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>

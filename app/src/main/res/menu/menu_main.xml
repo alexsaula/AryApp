@@ -3,21 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_buscar"
-        android:title="@string/action_buscar"
-        android:icon="@drawable/ic_buscar_black"
+        android:id="@+id/action_adicionar"
+        android:title="@string/action_adicionar"
+        android:icon="@drawable/ic_adicionar_black"
         app:showAsAction="always"
         />
-    <item
-        android:id="@+id/action_atualizar"
-        android:title="@string/action_atualizar"
-        android:icon="@drawable/ic_atualizar_black"
-        app:showAsAction="ifRoom"
-        />
+
     <item
         android:id="@+id/action_config"
         android:title="@string/action_config"
-        app:showAsAction="never"
+        android:icon="@drawable/ic_configuracoes_black"
+        app:showAsAction="always"
         />
 
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout"
+        android:icon="@drawable/logout"
+        app:showAsAction="never"
+        />
 </menu>

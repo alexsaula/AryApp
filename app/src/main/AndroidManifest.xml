@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AryApp">
-        <activity android:name=".DebugActivity" />
+        <activity android:name=".PadraoActivity"></activity>
+        <activity android:name=".ConfigActivity" />
+        <activity android:name=".AgendamentoActivity" />
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".TelaInicialActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

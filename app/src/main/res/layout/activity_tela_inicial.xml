@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".TelaInicialActivity">
 
+
+    <Button
+        android:id="@+id/bt_historico"
+        android:layout_width="97dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="80dp"
+        android:text="Histórico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_avaliacao"
+        android:layout_width="97dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="80dp"
+        android:text="Avaliação"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_galeria"
+        android:layout_width="97dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Galeria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
