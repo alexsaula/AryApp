@@ -7,6 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -27,33 +29,32 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         supportActionBar?.title = "Menu Inicial"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val intent = Intent(this, PadraoActivity::class.java)
-
-        bt_galeria.setOnClickListener {
-            val bt_galeria = bt_galeria.text.toString()
-            val params = Bundle()
-            params.putString("botao", bt_galeria)
-            intent.putExtras(params)
-            startActivity(intent)
-        }
-
-        bt_historico.setOnClickListener {
-            val bt_historico = bt_historico.text.toString()
-            val params = Bundle()
-            params.putString("botao", bt_historico)
-            intent.putExtras(params)
-            startActivity(intent)
-        }
-
-        bt_avaliacao.setOnClickListener {
-            val bt_avaliacao = bt_avaliacao.text.toString()
-            val params = Bundle()
-            params.putString("botao", bt_avaliacao)
-            intent.putExtras(params)
-            startActivity(intent)
-        }
 
         configuraMenuLateral()
+
+        recycler_servicos?.layoutManager = LinearLayoutManager(this)
+
+
+    }
+
+    private var servicos = listOf<Servico>()
+
+    override fun onResume() {
+        super.onResume()
+        servicos = ServicoService.getServicos()
+        recycler_servicos?.adapter = ServicoAdapter(servicos) {
+            onClickServico(it)
+        }
+    }
+
+    fun onClickServico(servico: Servico) {
+        Toast.makeText(this, "Clicou serviço ${servico.nome}", Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(this, DetalheServicoActivity::class.java)
+
+        intent.putExtra("Serviço", servico)
+
+        startActivity(intent)
     }
 
     private fun configuraMenuLateral() {
@@ -74,6 +75,26 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.nav_servicos-> {
+                Toast.makeText(this, "Clicou em Serviços", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, TelaInicialActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_forum -> {
+                Toast.makeText(this, "Clicou em Fórum", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_localizacao -> {
+                Toast.makeText(this, "Clicou em Localização", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_sair -> {
+                finish()
+            }
+        }
+
+        layout_menu_lateral.closeDrawer(GravityCompat.START)
+
         return true
     }
 

@@ -5,22 +5,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="#56fe12"
+    android:background="@color/white"
     android:layout_gravity="bottom"
     android:padding="16dp">
 
-    <imageView
+
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
+        app:srcCompat="@drawable/logo"
         android:paddingTop="16dp"
         />
 
-    <textView
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nome Usuário"
         android:paddingTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         />
 
 
