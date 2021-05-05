@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300sp"
+        android:layout_height="250sp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/tLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuário"
+        android:textSize="20sp"
+        android:layout_marginLeft="10sp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/campo_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Digite seu usuário"
+        android:layout_marginLeft="7sp"
+        android:layout_marginBottom="20sp"
+         />
+
+    <TextView
+        android:id="@+id/Senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        android:layout_marginLeft="7sp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/campo_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/texto_senha"
+        android:layout_marginLeft="7sp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkLogin"
+        android:layout_width="153dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Lembrar Login" />
+
+    <Button
+        android:id="@+id/botao_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="login" />
+
+    <Button
+        android:id="@+id/botaoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>

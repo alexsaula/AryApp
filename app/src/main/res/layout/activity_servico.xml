@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServicoActivity">
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="271dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nome do Servico"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="48dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Imagem do Serviço"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="165dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/profissional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Profissional Responsavel"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="234dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Descricao Resumida"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="314dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/salvar"
+        android:layout_width="144dp"
+        android:layout_height="50dp"
+        android:text="Salvar"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="452dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
