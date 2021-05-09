@@ -22,7 +22,7 @@ class ServicoActivity : AppCompatActivity() {
             s.foto = textofoto
 
             Thread {
-                ServicoService.saveServico(s)
+                ServicoService.saveServicoDB(s)
                 runOnUiThread{
                     finish()
                 }
